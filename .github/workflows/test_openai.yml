@@ -9,6 +9,7 @@ jobs:
 
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      PYTHONPATH: ${{ github.workspace }}
 
     steps:
       - name: Checkout Repository
@@ -31,3 +32,11 @@ jobs:
       - name: Run Basic Responses API Example
         run: |
           python 01_responses_api/basic_response.py
+
+      - name: Run System Prompting Example
+        run: |
+          python 01_responses_api/system_prompting.py
+
+      - name: Run Structured JSON Output Example
+        run: |
+          python 01_responses_api/structured_json_output.py
