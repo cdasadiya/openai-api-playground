@@ -5,29 +5,16 @@ Purpose:
 Demonstrates a basic OpenAI Responses API call using Python.
 
 Concepts Covered:
-- OpenAI client initialization
+- Shared OpenAI client usage
 - Simple text generation
-- Environment variable loading
+- Centralized configuration
 - Basic error handling
 
 Run:
-python basic_response.py
+python 01_responses_api/basic_response.py
 """
 
-import os
-from dotenv import load_dotenv
-from openai import OpenAI
-
-
-load_dotenv()
-
-api_key = os.getenv("OPENAI_API_KEY")
-
-if not api_key:
-    raise ValueError("OPENAI_API_KEY is missing from environment variables")
-
-
-client = OpenAI(api_key=api_key)
+from utils.openai_client import client
 
 
 try:
