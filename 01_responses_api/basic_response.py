@@ -9,10 +9,22 @@ Concepts Covered:
 - Simple text generation
 - Centralized configuration
 - Basic error handling
+- Portable import handling for Codespaces
 
 Run:
 python 01_responses_api/basic_response.py
+
+OR from inside the folder:
+python basic_response.py
 """
+
+import sys
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.append(str(PROJECT_ROOT))
+
 
 from utils.openai_client import client
 
