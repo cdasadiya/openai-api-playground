@@ -2,46 +2,54 @@ name: Test OpenAI Example
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
 
 jobs:
   test-openai-example:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
 
     env:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       PYTHONPATH: ${{ github.workspace }}
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      NODE_OPTIONS: --no-deprecation
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
+          cache: 'pip'
 
       - name: Display Python Version
-        run: |
-          python --version
+        run: python --version
+
+      - name: Upgrade Pip
+        run: python -m pip install --upgrade pip
 
       - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Validate OpenAI API Key
         run: |
           python -c "import os; assert os.getenv('OPENAI_API_KEY'), 'OPENAI_API_KEY is missing'"
 
       - name: Run Basic Responses API Example
-        run: |
-          python 01_responses_api/basic_response.py
+        run: python 01_responses_api/basic_response.py
 
       - name: Run System Prompting Example
-        run: |
-          python 01_responses_api/system_prompting.py
+        run: python 01_responses_api/system_prompting.py
 
       - name: Run Structured JSON Output Example
-        run: |
-          python 01_responses_api/structured_json_output.py
+        run: python 01_responses_api/structured_json_output.py
