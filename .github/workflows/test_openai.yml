@@ -1,0 +1,33 @@
+name: Test OpenAI Example
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-openai-example:
+    runs-on: ubuntu-latest
+
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate OpenAI API Key
+        run: |
+          python -c "import os; assert os.getenv('OPENAI_API_KEY'), 'OPENAI_API_KEY is missing'"
+
+      - name: Run Basic Responses API Example
+        run: |
+          python 01_responses_api/basic_response.py
