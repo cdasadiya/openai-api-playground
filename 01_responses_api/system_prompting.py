@@ -8,19 +8,13 @@ Concepts Covered:
 - System prompts
 - Instruction hierarchy
 - Controlled response behavior
+- Shared OpenAI client usage
 
 Run:
-python system_prompting.py
+python 01_responses_api/system_prompting.py
 """
 
-import os
-from dotenv import load_dotenv
-from openai import OpenAI
-
-
-load_dotenv()
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+from utils.openai_client import client
 
 
 SYSTEM_PROMPT = """
