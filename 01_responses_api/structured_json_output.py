@@ -8,21 +8,15 @@ Concepts Covered:
 - Structured outputs
 - JSON generation
 - Reliable machine-readable responses
+- Shared OpenAI client usage
 
 Run:
-python structured_json_output.py
+python 01_responses_api/structured_json_output.py
 """
 
 import json
-import os
 
-from dotenv import load_dotenv
-from openai import OpenAI
-
-
-load_dotenv()
-
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+from utils.openai_client import client
 
 
 PROMPT = """
