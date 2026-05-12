@@ -9,10 +9,22 @@ Concepts Covered:
 - Instruction hierarchy
 - Controlled response behavior
 - Shared OpenAI client usage
+- Portable import handling for Codespaces
 
 Run:
 python 01_responses_api/system_prompting.py
+
+OR from inside the folder:
+python system_prompting.py
 """
+
+import sys
+from pathlib import Path
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.append(str(PROJECT_ROOT))
+
 
 from utils.openai_client import client
 
