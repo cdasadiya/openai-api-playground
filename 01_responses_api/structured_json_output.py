@@ -1,6 +1,9 @@
 """
 File: structured_json_output.py
 
+Author: Chaitanya Dasadiya
+GitHub: https://github.com/cdasadiya
+
 Purpose:
 Demonstrates structured JSON generation using OpenAI Responses API.
 
