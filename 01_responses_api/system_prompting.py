@@ -13,6 +13,7 @@ Concepts Covered:
 - Controlled response behavior
 - Shared OpenAI client usage
 - Portable import handling for Codespaces
+- Production-style debugging
 
 Run:
 python 01_responses_api/system_prompting.py
@@ -22,6 +23,7 @@ python system_prompting.py
 """
 
 import sys
+import traceback
 from pathlib import Path
 
 
@@ -34,19 +36,25 @@ from utils.openai_client import client
 
 SYSTEM_PROMPT = """
 You are a senior software architect.
-Provide concise and production-focused answers.
+Provide concise, production-focused, and technically accurate answers.
+Focus on scalability, observability, reliability, and maintainability.
 """
+
+
+USER_PROMPT = "How should microservices communicate in production systems?"
 
 
 try:
     response = client.responses.create(
         model="gpt-4.1-mini",
         instructions=SYSTEM_PROMPT,
-        input="How should microservices communicate in production systems?"
+        input=USER_PROMPT
     )
 
     print("\n=== SYSTEM PROMPT RESPONSE ===\n")
     print(response.output_text)
 
 except Exception as error:
-    print(f"Request failed: {error}")
+    print("\n=== FULL ERROR TRACEBACK ===\n")
+    traceback.print_exc()
+    print(f"\nRequest failed: {error}")
