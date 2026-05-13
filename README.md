@@ -61,6 +61,7 @@ This repository is designed for developers who want more than quick-start snippe
 18_cost_optimization/
 19_production_patterns/
 20_full_projects/
+utils/
 ```
 
 Each folder focuses on one domain and contains practical examples that can be adapted for real-world applications.
@@ -79,39 +80,196 @@ Each folder focuses on one domain and contains practical examples that can be ad
 
 ---
 
-## Quick Start
+# Quick Start
 
-### 1. Clone the Repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/cdasadiya/openai-api-playground.git
 cd openai-api-playground
 ```
 
-### 2. Create a Virtual Environment
+---
+
+# OpenAI API Key Setup Guide
+
+This project supports two recommended development environments:
+
+1. Local Machine Development
+2. GitHub Codespaces Development
+
+---
+
+# Method 1: Local Machine Setup
+
+## Step 1: Create Virtual Environment
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Install Dependencies
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+---
+
+## Step 2: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure Environment Variables
+---
 
-Create a `.env` file:
+## Step 3: Create `.env` File
+
+Create a `.env` file in the project root:
 
 ```env
-OPENAI_API_KEY=your_openai_api_key
+OPENAI_API_KEY=sk-proj-your_api_key_here
+```
+
+Example:
+
+```text
+openai-api-playground/
+├── .env
+├── requirements.txt
+├── README.md
+└── utils/
 ```
 
 ---
 
-## Example Workflow
+## Step 4: Run the Project
+
+Run from the repository root:
+
+```bash
+python 01_responses_api/basic_response.py
+```
+
+---
+
+# Method 2: GitHub Codespaces Setup
+
+This is the recommended approach for browser-based development.
+
+---
+
+## Step 1: Open Repository in Codespaces
+
+1. Open the repository on GitHub
+2. Click `Code`
+3. Select `Codespaces`
+4. Create a new Codespace
+
+---
+
+## Step 2: Create Codespaces Secret
+
+Never hardcode API keys directly inside Python files.
+
+Go to:
+
+```text
+GitHub → Settings → Codespaces → Secrets
+```
+
+Create a new secret:
+
+```text
+Name: OPENAI_API_KEY
+Value: sk-proj-your_api_key_here
+```
+
+Grant repository access to:
+
+```text
+openai-api-playground
+```
+
+---
+
+## Step 3: Verify API Key
+
+Inside Codespaces terminal:
+
+```bash
+echo $OPENAI_API_KEY
+```
+
+If the key prints correctly, setup is successful.
+
+---
+
+## Step 4: Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Step 5: Run the Project
+
+```bash
+python 01_responses_api/basic_response.py
+```
+
+---
+
+# API Key Security Best Practices
+
+## Never Do These
+
+❌ Never commit API keys to GitHub
+
+❌ Never hardcode keys inside Python files
+
+❌ Never share screenshots containing API keys
+
+❌ Never store API keys inside public repositories
+
+❌ Never push `.env` files to GitHub
+
+---
+
+## Correct Secure Approach
+
+✅ Use `.env` files locally
+
+✅ Use GitHub Secrets for Codespaces and GitHub Actions
+
+✅ Rotate compromised keys immediately
+
+✅ Add `.env` to `.gitignore`
+
+✅ Restrict repository visibility if testing sensitive systems
+
+---
+
+# Recommended `.gitignore`
+
+```gitignore
+# Environment files
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+```
+
+---
+
+# Example Workflow
 
 ```python
 from openai import OpenAI
