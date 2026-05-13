@@ -16,7 +16,7 @@ Concepts Covered:
 - Production-safe structured generation
 
 Run:
-python 01_responses_api/structured_json_output.py
+python 02_responses_api/structured_json_output.py
 
 OR from inside the folder:
 python structured_json_output.py

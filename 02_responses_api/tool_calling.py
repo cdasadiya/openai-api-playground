@@ -8,7 +8,7 @@ Purpose:
 Demonstrates tool calling workflows using OpenAI Responses API.
 
 Run:
-python 05_tool_calling/tool_calling.py
+python 02_responses_api/tool_calling.py
 """
 
 import sys

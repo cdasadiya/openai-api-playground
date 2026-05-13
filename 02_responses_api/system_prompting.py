@@ -16,7 +16,7 @@ Concepts Covered:
 - Production-style debugging
 
 Run:
-python 01_responses_api/system_prompting.py
+python 02_responses_api/system_prompting.py
 
 OR from inside the folder:
 python system_prompting.py

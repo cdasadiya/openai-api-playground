@@ -14,8 +14,15 @@ Concepts Covered:
 - HTTP/2 compatibility handling for Codespaces
 """
 
+import sys
+from pathlib import Path
+
 import httpx
 from openai import OpenAI
+
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+sys.path.append(str(PROJECT_ROOT))
 
 from utils.config import OPENAI_API_KEY
 

@@ -8,7 +8,7 @@ Purpose:
 Demonstrates reasoning-oriented prompts using OpenAI Responses API.
 
 Run:
-python 07_reasoning_models/reasoning_models.py
+python 02_responses_api/reasoning_models.py
 """
 
 import sys
