@@ -2,11 +2,11 @@
 
 A production-focused collection of OpenAI API examples built with Python.
 
-This repository is designed for developers who want more than quick-start snippets. It demonstrates how to build reliable, scalable, and maintainable AI applications using modern OpenAI APIs and engineering patterns.
+This repository demonstrates how to build scalable, maintainable, and production-ready AI systems using modern OpenAI APIs, structured engineering patterns, and real-world architecture practices.
 
 ---
 
-## Author
+# Author
 
 **Chaitanya Dasadiya**
 
@@ -15,60 +15,254 @@ This repository is designed for developers who want more than quick-start snippe
 
 ---
 
-## What You’ll Learn
+# Repository Goals
 
-- Responses API workflows
-- Chat Completions and multi-turn conversations
-- Streaming responses
-- Function calling and tool usage
-- Structured outputs with JSON schemas
-- Embeddings and semantic search
-- Retrieval-Augmented Generation (RAG)
-- Image generation pipelines
-- Speech-to-text and text-to-speech
-- Realtime API integrations
-- AI agents and orchestration
-- Evaluation frameworks
-- Guardrails and safety patterns
-- Batch processing
-- Fine-tuning workflows
-- MCP server integrations
-- Cost optimization strategies
-- Production deployment patterns
+This repository is designed to become a complete professional OpenAI engineering reference covering:
+
+- OpenAI APIs
+- AI agents
+- Multi-modal systems
+- Production AI architectures
+- RAG pipelines
+- Realtime systems
+- Fine-tuning
+- Deployment systems
+- AI infrastructure engineering
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```text
 01_responses_api/
 02_chat_completions/
 03_streaming/
-04_function_calling/
-05_structured_outputs/
-06_embeddings/
-07_rag/
-08_image_generation/
-09_audio_transcription/
-10_text_to_speech/
-11_realtime_api/
-12_agents/
-13_eval_frameworks/
-14_guardrails/
-15_batch_processing/
-16_fine_tuning/
-17_mcp_servers/
-18_cost_optimization/
-19_production_patterns/
-20_full_projects/
+04_structured_outputs/
+05_function_calling/
+06_reasoning_models/
+07_realtime_api/
+08_audio_apis/
+09_vision_apis/
+10_image_generation/
+11_embeddings_and_search/
+12_rag_systems/
+13_fine_tuning/
+14_agents_and_mcp/
+15_file_and_vector_apis/
+16_safety_and_guardrails/
+17_production_engineering/
+18_ai_architecture/
+19_deployment/
+20_ecosystem_integrations/
+21_advanced_agent_systems/
+22_full_projects/
 utils/
 ```
 
-Each folder focuses on one domain and contains practical examples that can be adapted for real-world applications.
+---
+
+# Current Implemented Examples
+
+## Responses API
+
+### Completed
+
+- [x] basic_response.py
+- [x] structured_json_output.py
+- [x] system_prompting.py
+
+### Planned
+
+- [ ] Streaming responses
+- [ ] Function calling
+- [ ] Tool calling
+- [ ] Multi-turn conversations
+- [ ] Reasoning models
 
 ---
 
-## Tech Stack
+# Complete OpenAI API Topics Checklist
+
+## Core Platform
+
+- [ ] Authentication
+- [ ] API keys
+- [ ] Organizations
+- [ ] Projects
+- [ ] Usage tracking
+- [ ] Billing
+- [ ] Rate limits
+- [ ] Models
+- [ ] Tokens
+- [ ] Pricing optimization
+
+---
+
+## Text & Reasoning APIs
+
+- [x] Responses API
+- [ ] Chat Completions
+- [ ] Streaming
+- [x] Structured outputs
+- [x] JSON schema outputs
+- [ ] Function calling
+- [ ] Tool calling
+- [ ] Reasoning models
+
+---
+
+## Realtime APIs
+
+- [ ] WebSocket connections
+- [ ] Live streaming
+- [ ] Realtime voice
+- [ ] Realtime transcription
+- [ ] Interrupt handling
+- [ ] Low-latency systems
+
+---
+
+## Audio APIs
+
+- [ ] Speech-to-text
+- [ ] Transcription
+- [ ] Translation
+- [ ] Text-to-speech
+- [ ] Voice synthesis
+- [ ] Audio generation
+
+---
+
+## Vision APIs
+
+- [ ] Image understanding
+- [ ] OCR
+- [ ] Multi-image analysis
+- [ ] Vision reasoning
+
+---
+
+## Image APIs
+
+- [ ] Image generation
+- [ ] Image editing
+- [ ] Variations
+- [ ] Inpainting
+- [ ] Style transfer
+
+---
+
+## Embeddings & Search
+
+- [ ] Embeddings
+- [ ] Semantic search
+- [ ] Similarity search
+- [ ] RAG pipelines
+- [ ] Vector databases
+
+---
+
+## Fine-Tuning
+
+- [ ] Dataset preparation
+- [ ] Training jobs
+- [ ] Hyperparameters
+- [ ] Evaluation
+- [ ] Deployment
+
+---
+
+## Assistants & Agents
+
+- [ ] Agents SDK
+- [ ] Tool orchestration
+- [ ] Memory
+- [ ] Sessions
+- [ ] MCP
+- [ ] Multi-agent systems
+
+---
+
+## File & Data APIs
+
+- [ ] Files API
+- [ ] Uploads
+- [ ] Batch processing
+- [ ] Vector stores
+
+---
+
+## Safety & Moderation
+
+- [ ] Moderation API
+- [ ] Safety systems
+- [ ] Guardrails
+- [ ] Prompt injection prevention
+
+---
+
+## Production Engineering
+
+- [ ] Scaling
+- [ ] Monitoring
+- [ ] Observability
+- [ ] Logging
+- [ ] Retry systems
+- [ ] Queue systems
+- [ ] Caching
+- [ ] Load balancing
+- [ ] Cost optimization
+
+---
+
+## AI Architecture
+
+- [ ] RAG systems
+- [ ] AI workflows
+- [ ] Agent systems
+- [ ] Multi-modal systems
+- [ ] Hybrid AI architectures
+- [ ] Autonomous systems
+
+---
+
+## Deployment
+
+- [ ] Docker
+- [ ] Kubernetes
+- [ ] Serverless
+- [ ] Edge deployment
+- [ ] CI/CD
+- [ ] Cloud deployment
+
+---
+
+## Ecosystem Integrations
+
+- [ ] LangChain
+- [ ] LlamaIndex
+- [ ] Pinecone
+- [ ] Weaviate
+- [ ] Supabase
+- [ ] Vercel AI SDK
+
+---
+
+## Advanced Systems
+
+- [ ] Long-context systems
+- [ ] AI memory systems
+- [ ] Planning systems
+- [ ] Reflection loops
+- [ ] Self-improving agents
+- [ ] Tool ecosystems
+- [ ] Computer-use agents
+- [ ] Browser agents
+- [ ] Coding agents
+
+---
+
+# Tech Stack
 
 | Category | Tools |
 |---|---|
@@ -82,7 +276,7 @@ Each folder focuses on one domain and contains practical examples that can be ad
 
 # Quick Start
 
-## 1. Clone the Repository
+## Clone the Repository
 
 ```bash
 git clone https://github.com/cdasadiya/openai-api-playground.git
@@ -93,16 +287,16 @@ cd openai-api-playground
 
 # OpenAI API Key Setup Guide
 
-This project supports two recommended development environments:
+This repository supports:
 
-1. Local Machine Development
-2. GitHub Codespaces Development
+1. Local machine development
+2. GitHub Codespaces development
 
 ---
 
 # Method 1: Local Machine Setup
 
-## Step 1: Create Virtual Environment
+## Create Virtual Environment
 
 ```bash
 python3 -m venv .venv
@@ -117,7 +311,7 @@ Windows:
 
 ---
 
-## Step 2: Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -125,29 +319,15 @@ pip install -r requirements.txt
 
 ---
 
-## Step 3: Create `.env` File
-
-Create a `.env` file in the project root:
+## Create `.env` File
 
 ```env
 OPENAI_API_KEY=sk-proj-your_api_key_here
 ```
 
-Example:
-
-```text
-openai-api-playground/
-├── .env
-├── requirements.txt
-├── README.md
-└── utils/
-```
-
 ---
 
-## Step 4: Run the Project
-
-Run from the repository root:
+## Run the Project
 
 ```bash
 python 01_responses_api/basic_response.py
@@ -157,22 +337,7 @@ python 01_responses_api/basic_response.py
 
 # Method 2: GitHub Codespaces Setup
 
-This is the recommended approach for browser-based development.
-
----
-
-## Step 1: Open Repository in Codespaces
-
-1. Open the repository on GitHub
-2. Click `Code`
-3. Select `Codespaces`
-4. Create a new Codespace
-
----
-
-## Step 2: Create Codespaces Secret
-
-Never hardcode API keys directly inside Python files.
+## Create Codespaces Secret
 
 Go to:
 
@@ -180,14 +345,14 @@ Go to:
 GitHub → Settings → Codespaces → Secrets
 ```
 
-Create a new secret:
+Create:
 
 ```text
 Name: OPENAI_API_KEY
 Value: sk-proj-your_api_key_here
 ```
 
-Grant repository access to:
+Grant access to:
 
 ```text
 openai-api-playground
@@ -195,27 +360,15 @@ openai-api-playground
 
 ---
 
-## Step 3: Verify API Key
-
-Inside Codespaces terminal:
+## Verify API Key
 
 ```bash
 echo $OPENAI_API_KEY
 ```
 
-If the key prints correctly, setup is successful.
-
 ---
 
-## Step 4: Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Step 5: Run the Project
+## Run the Project
 
 ```bash
 python 01_responses_api/basic_response.py
@@ -229,38 +382,35 @@ python 01_responses_api/basic_response.py
 
 ❌ Never commit API keys to GitHub
 
-❌ Never hardcode keys inside Python files
+❌ Never hardcode API keys inside Python files
 
-❌ Never share screenshots containing API keys
+❌ Never push `.env` files
 
-❌ Never store API keys inside public repositories
+❌ Never expose API keys in screenshots
 
-❌ Never push `.env` files to GitHub
+❌ Never store secrets in public repositories
 
 ---
 
 ## Correct Secure Approach
 
-✅ Use `.env` files locally
+✅ Use `.env` locally
 
-✅ Use GitHub Secrets for Codespaces and GitHub Actions
-
-✅ Rotate compromised keys immediately
+✅ Use GitHub Secrets for Codespaces and Actions
 
 ✅ Add `.env` to `.gitignore`
 
-✅ Restrict repository visibility if testing sensitive systems
+✅ Rotate compromised keys immediately
+
+✅ Validate AI outputs before execution
 
 ---
 
 # Recommended `.gitignore`
 
 ```gitignore
-# Environment files
 .env
 .env.*
-
-# Python
 __pycache__/
 *.pyc
 .venv/
@@ -269,98 +419,70 @@ venv/
 
 ---
 
-# Example Workflow
+# Engineering Principles
 
-```python
-from openai import OpenAI
+This repository follows production-focused engineering standards:
 
-client = OpenAI()
-
-response = client.responses.create(
-    model="gpt-4.1-mini",
-    input="Explain Retrieval-Augmented Generation in simple terms."
-)
-
-print(response.output_text)
-```
-
----
-
-## Engineering Principles
-
-This repository prioritizes practical software engineering patterns instead of isolated toy examples.
-
-### Included Standards
-
-- Clear separation of concerns
-- Typed and structured outputs
-- Error handling and retries
-- Logging and observability
+- Centralized OpenAI client architecture
 - Environment-based configuration
-- Async support where applicable
-- Scalable project organization
-- Reusable utility patterns
+- Structured outputs
+- Reusable utilities
+- Debugging support
+- Error handling
+- Secure secret management
+- Codespaces compatibility
+- Production-safe patterns
 
 ---
 
-## Recommended Learning Path
-
-If you are new to OpenAI APIs, follow this order:
+# Recommended Learning Path
 
 1. Responses API
-2. Chat Completions
+2. Structured Outputs
 3. Streaming
 4. Function Calling
-5. Structured Outputs
-6. Embeddings
-7. RAG
-8. Agents
-9. Production Patterns
-10. Full Projects
+5. Embeddings
+6. RAG
+7. Agents
+8. Realtime APIs
+9. Fine-Tuning
+10. Production AI Systems
 
 ---
 
-## Use Cases
+# Use Cases
 
 This repository can be used for:
 
 - AI engineering interview preparation
-- Internal company AI tooling
-- Rapid AI prototyping
-- Developer education
+- OpenAI API learning
 - Production AI architecture references
-- Building SaaS AI products
-- Learning advanced OpenAI API capabilities
+- AI SaaS development
+- Internal AI tooling
+- Rapid AI prototyping
+- Agent system experimentation
+- Multi-modal AI systems
 
 ---
 
-## Security Notes
-
-- Never commit API keys
-- Use environment variables for secrets
-- Add rate limiting in production systems
-- Validate model outputs before execution
-- Monitor token usage and costs
-
----
-
-## Contributing
+# Contributing
 
 Contributions are welcome.
 
 Suggested contribution areas:
 
-- Additional API examples
-- Benchmarking workflows
-- Agent orchestration patterns
-- Testing strategies
+- New OpenAI API examples
+- RAG systems
+- Realtime applications
+- AI agent orchestration
 - CI/CD automation
 - Deployment examples
 - Performance optimization
+- Production monitoring
 
 ---
 
-## License
+# License
 
 This repository is licensed under the MIT License.
 See the [LICENSE](LICENSE) file for details.
