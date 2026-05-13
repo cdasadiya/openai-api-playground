@@ -6,6 +6,15 @@ This repository is designed for developers who want more than quick-start snippe
 
 ---
 
+## Author
+
+**Chirag Dasadiya**
+
+- GitHub: https://github.com/cdasadiya
+- Focus Areas: AI Engineering, Python Development, OpenAI APIs, Automation
+
+---
+
 ## What You’ll Learn
 
 - Responses API workflows
