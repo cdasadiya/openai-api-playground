@@ -19,7 +19,7 @@ import sys
 from pathlib import Path
 
 import httpx
-from openai import OpenAI
+from openai import AsyncOpenAI, OpenAI
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -34,9 +34,23 @@ http_client = httpx.Client(
 )
 
 
+async_http_client = httpx.AsyncClient(
+    http2=False,
+    timeout=60.0
+)
+
+
 client = OpenAI(
     api_key=OPENAI_API_KEY,
     organization=OPENAI_ORG_ID or None,
     project=OPENAI_PROJECT_ID or None,
     http_client=http_client
+)
+
+
+async_client = AsyncOpenAI(
+    api_key=OPENAI_API_KEY,
+    organization=OPENAI_ORG_ID or None,
+    project=OPENAI_PROJECT_ID or None,
+    http_client=async_http_client
 )
