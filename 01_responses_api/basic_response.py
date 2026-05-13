@@ -1,6 +1,9 @@
 """
 File: basic_response.py
 
+Author: Chaitanya Dasadiya
+GitHub: https://github.com/cdasadiya
+
 Purpose:
 Demonstrates a basic OpenAI Responses API call using Python.
 
