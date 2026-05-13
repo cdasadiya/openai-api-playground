@@ -46,7 +46,7 @@ utils/
 
 ## Folder Guide
 
-- `01_core_platform/` — core platform concepts such as authentication, projects, billing, rate limits, models, tokens, and usage tracking.
+- `01_core_platform/` — production platform foundations such as authentication, API keys, organizations, projects, usage tracking, billing, rate limits, models, tokens, and pricing optimization.
 - `02_responses_api/` — all Responses API examples, including basic responses, structured output, prompting, streaming, function calling, tool calling, multi-turn conversations, and reasoning prompts.
 - `03_realtime_apis/` — realtime API examples and low-latency systems.
 - `04_audio_apis/` — audio API examples for transcription, translation, text-to-speech, and voice workflows.
@@ -56,6 +56,46 @@ utils/
 ---
 
 # Current Implemented Examples
+
+## Core Platform
+
+All implemented Core Platform examples live in `01_core_platform/`.
+
+- [x] `01_core_platform/authentication.py`
+- [x] `01_core_platform/api_keys.py`
+- [x] `01_core_platform/organizations.py`
+- [x] `01_core_platform/projects.py`
+- [x] `01_core_platform/usage_tracking.py`
+- [x] `01_core_platform/billing.py`
+- [x] `01_core_platform/rate_limits.py`
+- [x] `01_core_platform/models.py`
+- [x] `01_core_platform/tokens.py`
+- [x] `01_core_platform/pricing_optimization.py`
+
+## Running Core Platform Examples
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Set `OPENAI_API_KEY` in your environment, GitHub Codespaces secret, or local `.env` file. Optionally set `OPENAI_ORG_ID` and `OPENAI_PROJECT_ID` when you need explicit organization or project scoping. Then run examples from the repository root:
+
+```bash
+python 01_core_platform/authentication.py
+python 01_core_platform/api_keys.py
+python 01_core_platform/organizations.py
+python 01_core_platform/projects.py
+python 01_core_platform/usage_tracking.py
+python 01_core_platform/billing.py
+python 01_core_platform/rate_limits.py
+python 01_core_platform/models.py
+python 01_core_platform/tokens.py
+python 01_core_platform/pricing_optimization.py
+```
+
+Each example also supports running from inside its own folder because it adds the repository root to `sys.path` before importing shared utilities.
 
 ## Responses API
 
@@ -99,16 +139,16 @@ Each example also supports running from inside its own folder because it adds th
 
 ## Core Platform
 
-- [ ] Authentication
-- [ ] API keys
-- [ ] Organizations
-- [ ] Projects
-- [ ] Usage tracking
-- [ ] Billing
-- [ ] Rate limits
-- [ ] Models
-- [ ] Tokens
-- [ ] Pricing optimization
+- [x] Authentication
+- [x] API keys
+- [x] Organizations
+- [x] Projects
+- [x] Usage tracking
+- [x] Billing
+- [x] Rate limits
+- [x] Models
+- [x] Tokens
+- [x] Pricing optimization
 
 ---
 

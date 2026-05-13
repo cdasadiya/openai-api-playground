@@ -10,6 +10,7 @@ Reusable centralized OpenAI client configuration.
 Concepts Covered:
 - Shared API client
 - Centralized SDK initialization
+- Optional organization and project scoping
 - Cleaner architecture
 - HTTP/2 compatibility handling for Codespaces
 """
@@ -24,7 +25,7 @@ from openai import OpenAI
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.append(str(PROJECT_ROOT))
 
-from utils.config import OPENAI_API_KEY
+from utils.config import OPENAI_API_KEY, OPENAI_ORG_ID, OPENAI_PROJECT_ID  # noqa: E402
 
 
 http_client = httpx.Client(
@@ -35,5 +36,7 @@ http_client = httpx.Client(
 
 client = OpenAI(
     api_key=OPENAI_API_KEY,
+    organization=OPENAI_ORG_ID or None,
+    project=OPENAI_PROJECT_ID or None,
     http_client=http_client
 )
