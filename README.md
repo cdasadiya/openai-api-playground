@@ -48,7 +48,7 @@ utils/
 
 - `01_core_platform/` — production platform foundations such as authentication, API keys, organizations, projects, usage tracking, billing, rate limits, models, tokens, and pricing optimization.
 - `02_responses_api/` — all Responses API examples, including basic responses, structured output, prompting, streaming, function calling, tool calling, multi-turn conversations, and reasoning prompts.
-- `03_realtime_apis/` — realtime API examples and low-latency systems.
+- `03_realtime_apis/` — realtime API examples covering WebSocket connections, live streaming, voice systems, realtime transcription, interrupt handling, and low-latency architectures.
 - `04_audio_apis/` — audio API examples for transcription, translation, text-to-speech, and voice workflows.
 - `05_vision_apis/` — vision API examples for image understanding, OCR, and vision reasoning.
 - `utils/` — shared configuration and OpenAI client utilities used by runnable examples.
@@ -135,6 +135,40 @@ Each example also supports running from inside its own folder because it adds th
 
 ---
 
+## Realtime APIs
+
+All implemented Realtime API examples live in `03_realtime_apis/`.
+
+- [x] `03_realtime_apis/websocket_connections.py`
+- [x] `03_realtime_apis/live_streaming.py`
+- [x] `03_realtime_apis/realtime_voice.py`
+- [x] `03_realtime_apis/realtime_transcription.py`
+- [x] `03_realtime_apis/interrupt_handling.py`
+- [x] `03_realtime_apis/low_latency_systems.py`
+
+## Running Realtime API Examples
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Set `OPENAI_API_KEY` in your environment, GitHub Codespaces secret, or local `.env` file. Then run examples from the repository root:
+
+```bash
+python 03_realtime_apis/websocket_connections.py
+python 03_realtime_apis/live_streaming.py
+python 03_realtime_apis/realtime_voice.py
+python 03_realtime_apis/realtime_transcription.py
+python 03_realtime_apis/interrupt_handling.py
+python 03_realtime_apis/low_latency_systems.py
+```
+
+The voice and transcription scripts include Codespaces-safe placeholder modes for environments without microphone or speaker devices.
+
+---
+
 # Complete OpenAI API Topics Checklist
 
 ## Core Platform
@@ -168,12 +202,12 @@ Each example also supports running from inside its own folder because it adds th
 
 ## Realtime APIs
 
-- [ ] WebSocket connections
-- [ ] Live streaming
-- [ ] Realtime voice
-- [ ] Realtime transcription
-- [ ] Interrupt handling
-- [ ] Low-latency systems
+- [x] WebSocket connections
+- [x] Live streaming
+- [x] Realtime voice
+- [x] Realtime transcription
+- [x] Interrupt handling
+- [x] Low-latency systems
 
 ---
 
