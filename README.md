@@ -31,36 +31,6 @@ This repository is designed to become a complete professional OpenAI engineering
 
 ---
 
-# Repository Structure
-
-```text
-01_responses_api/
-02_chat_completions/
-03_streaming/
-04_structured_outputs/
-05_function_calling/
-06_reasoning_models/
-07_realtime_api/
-08_audio_apis/
-09_vision_apis/
-10_image_generation/
-11_embeddings_and_search/
-12_rag_systems/
-13_fine_tuning/
-14_agents_and_mcp/
-15_file_and_vector_apis/
-16_safety_and_guardrails/
-17_production_engineering/
-18_ai_architecture/
-19_deployment/
-20_ecosystem_integrations/
-21_advanced_agent_systems/
-22_full_projects/
-utils/
-```
-
----
-
 # Current Implemented Examples
 
 ## Responses API
