@@ -9,10 +9,11 @@ Demonstrates structured JSON generation using OpenAI Responses API.
 
 Concepts Covered:
 - Structured outputs
-- JSON generation
+- JSON schema enforcement
 - Reliable machine-readable responses
 - Shared OpenAI client usage
 - Portable import handling for Codespaces
+- Production-safe structured generation
 
 Run:
 python 01_responses_api/structured_json_output.py
@@ -23,6 +24,7 @@ python structured_json_output.py
 
 import json
 import sys
+import traceback
 from pathlib import Path
 
 
@@ -34,14 +36,8 @@ from utils.openai_client import client
 
 
 PROMPT = """
-Generate a JSON object containing:
-- project_name
-- programming_language
-- difficulty_level
-- estimated_hours
-
-The topic is: Build a REST API using FastAPI.
-Return only valid JSON.
+Generate project planning information for:
+Build a REST API using FastAPI.
 """
 
 
@@ -49,6 +45,37 @@ try:
     response = client.responses.create(
         model="gpt-4.1-mini",
         input=PROMPT,
+        text={
+            "format": {
+                "type": "json_schema",
+                "name": "project_schema",
+                "strict": True,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "project_name": {
+                            "type": "string"
+                        },
+                        "programming_language": {
+                            "type": "string"
+                        },
+                        "difficulty_level": {
+                            "type": "string"
+                        },
+                        "estimated_hours": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "project_name",
+                        "programming_language",
+                        "difficulty_level",
+                        "estimated_hours"
+                    ],
+                    "additionalProperties": False
+                }
+            }
+        }
     )
 
     parsed_json = json.loads(response.output_text)
@@ -57,4 +84,6 @@ try:
     print(json.dumps(parsed_json, indent=4))
 
 except Exception as error:
-    print(f"Structured output generation failed: {error}")
+    print("\n=== FULL ERROR TRACEBACK ===\n")
+    traceback.print_exc()
+    print(f"\nStructured output generation failed: {error}")
