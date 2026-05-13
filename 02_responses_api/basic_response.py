@@ -16,7 +16,7 @@ Concepts Covered:
 - Full traceback debugging support
 
 Run:
-python 01_responses_api/basic_response.py
+python 02_responses_api/basic_response.py
 
 OR from inside the folder:
 python basic_response.py

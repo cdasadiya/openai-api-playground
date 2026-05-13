@@ -46,10 +46,10 @@ jobs:
           python -c "import os; assert os.getenv('OPENAI_API_KEY'), 'OPENAI_API_KEY is missing'"
 
       - name: Run Basic Responses API Example
-        run: python 01_responses_api/basic_response.py
+        run: python 02_responses_api/basic_response.py
 
       - name: Run System Prompting Example
-        run: python 01_responses_api/system_prompting.py
+        run: python 02_responses_api/system_prompting.py
 
       - name: Run Structured JSON Output Example
-        run: python 01_responses_api/structured_json_output.py
+        run: python 02_responses_api/structured_json_output.py

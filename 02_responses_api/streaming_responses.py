@@ -8,7 +8,7 @@ Purpose:
 Demonstrates streaming responses using the OpenAI Responses API.
 
 Run:
-python 03_streaming/streaming_responses.py
+python 02_responses_api/streaming_responses.py
 """
 
 import sys

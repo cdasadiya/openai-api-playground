@@ -8,7 +8,7 @@ Purpose:
 Demonstrates multi-turn conversations using previous response IDs.
 
 Run:
-python 06_multi_turn_conversations/multi_turn_conversation.py
+python 02_responses_api/multi_turn_conversation.py
 """
 
 import sys

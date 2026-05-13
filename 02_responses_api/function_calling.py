@@ -8,7 +8,7 @@ Purpose:
 Demonstrates OpenAI function calling patterns.
 
 Run:
-python 04_function_calling/function_calling.py
+python 02_responses_api/function_calling.py
 """
 
 import json

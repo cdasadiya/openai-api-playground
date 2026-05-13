@@ -31,23 +31,67 @@ This repository is designed to become a complete professional OpenAI engineering
 
 ---
 
+# Repository Structure
+
+The examples are grouped by API area so related scripts stay together:
+
+```text
+01_core_platform/
+02_responses_api/
+03_realtime_apis/
+04_audio_apis/
+05_vision_apis/
+utils/
+```
+
+## Folder Guide
+
+- `01_core_platform/` — core platform concepts such as authentication, projects, billing, rate limits, models, tokens, and usage tracking.
+- `02_responses_api/` — all Responses API examples, including basic responses, structured output, prompting, streaming, function calling, tool calling, multi-turn conversations, and reasoning prompts.
+- `03_realtime_apis/` — realtime API examples and low-latency systems.
+- `04_audio_apis/` — audio API examples for transcription, translation, text-to-speech, and voice workflows.
+- `05_vision_apis/` — vision API examples for image understanding, OCR, and vision reasoning.
+- `utils/` — shared configuration and OpenAI client utilities used by runnable examples.
+
+---
+
 # Current Implemented Examples
 
 ## Responses API
 
-### Completed
+All implemented Responses API examples live in `02_responses_api/`.
 
-- [x] basic_response.py
-- [x] structured_json_output.py
-- [x] system_prompting.py
+- [x] `02_responses_api/basic_response.py`
+- [x] `02_responses_api/structured_json_output.py`
+- [x] `02_responses_api/system_prompting.py`
+- [x] `02_responses_api/streaming_responses.py`
+- [x] `02_responses_api/function_calling.py`
+- [x] `02_responses_api/tool_calling.py`
+- [x] `02_responses_api/multi_turn_conversation.py`
+- [x] `02_responses_api/reasoning_models.py`
 
-### Planned
+## Running Responses API Examples
 
-- [ ] Streaming responses
-- [ ] Function calling
-- [ ] Tool calling
-- [ ] Multi-turn conversations
-- [ ] Reasoning models
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Set `OPENAI_API_KEY` in your environment, GitHub Codespaces secret, or local `.env` file. Then run examples from the repository root:
+
+```bash
+python 02_responses_api/basic_response.py
+python 02_responses_api/structured_json_output.py
+python 02_responses_api/system_prompting.py
+python 02_responses_api/streaming_responses.py
+python 02_responses_api/function_calling.py
+python 02_responses_api/tool_calling.py
+python 02_responses_api/multi_turn_conversation.py
+python 02_responses_api/reasoning_models.py
+```
+
+Each example also supports running from inside its own folder because it adds the repository root to `sys.path` before importing shared utilities.
 
 ---
 
@@ -71,13 +115,14 @@ This repository is designed to become a complete professional OpenAI engineering
 ## Text & Reasoning APIs
 
 - [x] Responses API
-- [ ] Chat Completions
-- [ ] Streaming
+- [x] Streaming
 - [x] Structured outputs
 - [x] JSON schema outputs
-- [ ] Function calling
-- [ ] Tool calling
-- [ ] Reasoning models
+- [x] Function calling
+- [x] Tool calling
+- [x] Multi-turn conversations
+- [x] Reasoning models
+- [ ] Chat Completions
 
 ---
 
@@ -300,7 +345,7 @@ OPENAI_API_KEY=sk-proj-your_api_key_here
 ## Run the Project
 
 ```bash
-python 01_responses_api/basic_response.py
+python 02_responses_api/basic_response.py
 ```
 
 ---
@@ -341,7 +386,7 @@ echo $OPENAI_API_KEY
 ## Run the Project
 
 ```bash
-python 01_responses_api/basic_response.py
+python 02_responses_api/basic_response.py
 ```
 
 ---
