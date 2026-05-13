@@ -13,6 +13,7 @@ Concepts Covered:
 - Centralized configuration
 - Basic error handling
 - Portable import handling for Codespaces
+- Full traceback debugging support
 
 Run:
 python 01_responses_api/basic_response.py
@@ -22,6 +23,7 @@ python basic_response.py
 """
 
 import sys
+import traceback
 from pathlib import Path
 
 
@@ -42,4 +44,6 @@ try:
     print(response.output_text)
 
 except Exception as error:
-    print(f"OpenAI API request failed: {error}")
+    print("\n=== FULL ERROR TRACEBACK ===\n")
+    traceback.print_exc()
+    print(f"\nOpenAI API request failed: {error}")
