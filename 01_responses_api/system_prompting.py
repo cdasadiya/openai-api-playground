@@ -1,6 +1,9 @@
 """
 File: system_prompting.py
 
+Author: Chaitanya Dasadiya
+GitHub: https://github.com/cdasadiya
+
 Purpose:
 Demonstrates how to use system instructions with the OpenAI Responses API.
 
